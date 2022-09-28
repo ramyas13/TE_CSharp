@@ -11,15 +11,15 @@ namespace TE_CSharp
         {
            
             Program e = new Program();
-            e.Display(3,"ramya","developer","ramya@gmail.com");
+            e.Display(3,"Ramya","developer","ramya@gmail.com");
 
         }
         public void Display(int eid,string ename,string erole,string email)
         {
             Console.WriteLine("Employee id is:{0}", eid );
-            Console.WriteLine("Employee id is:{0}", ename);
-            Console.WriteLine("Employee id is:{0}", erole);
-            Console.WriteLine("Employee id is:{0}", email);
+            Console.WriteLine("Employee name is:{0}", ename);
+            Console.WriteLine("Employee role is:{0}", erole);
+            Console.WriteLine("Employee email is:{0}", email);
 
 
         }
