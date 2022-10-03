@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TE_CSharp.outkeyword</StartupObject>
+    <StartupObject>TE_CSharp.Exceptions</StartupObject>
   </PropertyGroup>
 
 </Project>

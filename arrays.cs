@@ -8,7 +8,7 @@ namespace TE_CSharp
 {
     internal class arrays
     {
-        public static void Main()
+        public static void main()
         {
             int[,] x = new int[2, 3] { { 1, 2, 3 }, { 4, 5, 6} };
 
