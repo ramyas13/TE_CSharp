@@ -1,78 +1,66 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace TE_CSharp
 {
-    internal class Inheritance
+    /// <summary>
+    /// Parent class with protected variables
+    /// </summary>
+    public class Bonus
     {
-        public static void Main()
-        {
-            //Instance for the child class
-            //ITDept dept = new ITDept();
-            //dept.GetDetails();
+        protected int bonus=3000;
 
-            Admin admin = new Admin();
-            admin.GetDetails();
-            admin.DeptDetails();
-            ITStaff iTStaff = new ITStaff();
-            iTStaff.Message();
-
-        }
-    }
-    public class Emp
-    {
-        protected int eid;
-        protected string ename;
-        protected void EmpDetails()
-        {
-            Console.WriteLine("Emp Class");
-        }
     }
     /// <summary>
     /// Child class - can access the protected variables - Single
     /// </summary>
-    public class ITDept : Emp
+    public class staff : Bonus
     {
-        protected int did;
-        protected string dname;
-        public void DeptDetails()
+        protected int salary;
+        protected void bonus1()
         {
-            EmpDetails();
+            salary = 3 * bonus;
+            Console.WriteLine($"Bonus for Staff is {salary} ");
+            
+            
+           
         }
     }
-    /// <summary>
-    /// Child class - can access the protected variables - Multi-level
-    /// </summary>
-    public class Admin : ITDept
+    public class Nonstaff : staff
     {
-        /// <summary>
-        /// Assign the values for the eid and ename from Emp class
-        /// Assign the values for the did and dname from ITDept class
-        /// </summary>
-        public void GetDetails()
+        protected int salary1;
+        public void bonus2()
         {
-            eid = 100;
-            ename = "John";
-            did = 101;
-            dname = "IT";
-            Console.WriteLine($"{eid}:{ename}:{did}:{dname}");
-            EmpDetails();
-        }
-
-    }
-    /// <summary>
-    /// Child class - can access the protected variables - Hybrid,Hierarchial
-    /// </summary>
-
-    public class ITStaff : ITDept
-    {
-        public void Message()
-        {
-            Console.WriteLine($"{did}:{dname}");
+            Console.WriteLine($"Bonus is {bonus} ");
+            salary1 = 2 * bonus;
+            Console.WriteLine($"Bonus for NonStaff is {salary1} ");
+            bonus1();
         }
     }
-
+    internal class Inheritance
+    {
+        public static void Main()
+        {
+           
+            Nonstaff n = new Nonstaff();
+            n.bonus2();
+        }
+    }
 }
+
+
+
+        
+
+
+    
+
+
+
+        
+

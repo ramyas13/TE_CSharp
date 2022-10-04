@@ -23,8 +23,8 @@ namespace TE_CSharp
         }
         public void Bank3(string Bankname, string Interest_rate)
         {
-
-            Console.WriteLine($"{Bankname}:{Interest_rate}");
+            
+           Console.WriteLine($"{Bankname}:{Interest_rate}");
         }
         public void Bank4(string Bankname, string Interest_rate)
         {

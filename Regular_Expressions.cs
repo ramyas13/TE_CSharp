@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace TE_CSharp
 {
+    /// <summary>
+    /// Regular Expression - using System.Text.RegularExpressions;
+    /// </summary>
     internal class Regular_Expressions
     {
         public static void Main()
